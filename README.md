@@ -10,41 +10,33 @@ The code has been tailored to use UNET and machinelearning approaches.
 Calculations peformed are used to determine flourescent or brightfield intensity on either all the merged zstacks or on individual zstacks. 
 
 
-File Outputs:
+###File Outputs:
 Files are outputed for the sum of all zstakcs and for individual zstacks. They are outputted as pickle file
 
-
-
-backmeandfgfp_*  - mean background of the green channel, background is calculated after taking the sum of all zstacks 
-backmediandfgfp_*  - median background of the gfp channel , background is calculated after taking the sum of all zstacks 
-backmeandfrfp_*  - median background of the rfp channel , background is calculated after taking the sum of all zstacks 
-backmediandfrfp_*  - median background of the rfp channel , background is calculated after taking the sum of all zstacks 
-
- 
 infodf_* - info file with the cell name, position, time, cell boundary, eccentricity, translation shift, and area
-gfpGMmindf_*
+gfpGMmindf_* - This file contains the Gaussian mixture meanvalues of the smaller distribution from the GFP channel after a gaussian blur 
+gfpGMmindfori_* - This file contains the Gaussian mixture mean values of the smaller distribution from the GFP channel  NO gaussian blur 
+rfpGMmindf_* - This file contains the Gaussian mixture mean values of the smaller distribution from the RFP channel after a gaussian blur 
+rfpdf_* - file contains the MAX pixel values of the single cells for the RFP channel 
+rfpsumdf_* - the file contains the SUM pixel values of the single cells for the RFP channel 
+rfpGMmaxdf_* -  the file contains the mean max pixel after Gaus mixture model for the RFP channel 
+gfpdf_* - the file contains the max value of the pixel for each single cell when using a gaussian blur on the GFP channel
+gfpdfori_* - the file contains the max value of the pixel for each single cell of the GFP channel
+gfpsumdf_* - the file contains the sum of pixel values for each single cell of the GFP channel when using a gaussian blur
+gfpsumdfori_* - the file contains the sum of pixel values for each single cell of the GFP channel 
+gfpGMmaxdf_* the file contains the mean max pixel after Gaus mixture model for the GFP channel when using a gaussian blur
+gfpGMmaxdfori_* - the file contains the mean max pixel after Gaus mixture model for the GFP channel 
+proteinareadf_* the file contains the area of protein occupancy of the GFP channel. this is calculated by getting the sum of the total pixels occupied when using a threshold
+areamaskdf_* - the file contains the area of a single cell overtime
+radiusdf_* - the file contains the radius of each cell. This is calculated by using the areamaskdf file and assuming that the cell is always circular 
+volumedf_* - the file contains the volume of each cell. It is calculated by using the areamaskdf file and assuming that the cell is a sphere shape
+gfpmaxnorm_* - is the gfpdf/areamaskdf it is the max gfp values using the gaussian blur and divided by the area of the cell 
+gfpsumnorm_* - is the gfpsumdf/areamaskdf it is the sum GFP values using the gaussian blur and divided by the area of the cell 
+gfpmaxnormori_*- gfpdfori/areamaskdf it is the max gfp values and divided by the area of the cell 
+gfpsumnormori_* - is the gfpsumdfori/areamaskdf it is the sum GFP values and divided by the area of the cell 
 
-gfpGMmindfori.to_pickle(outfilename +str("gfpGMmindfori_" +str(date)+".pkl"))
-rfpGMmindf.to_pickle(outfilename +str("rfpGMmindf_" +str(date)+".pkl"))
 
-rfpdf.to_pickle(outfilename +str("rfpdf_" +str(date)+".pkl"))
-rfpsumdf.to_pickle(outfilename +str("rfpsumdf_" +str(date)+".pkl"))
-rfpGMmaxdf.to_pickle(outfilename +str("rfpGMmaxdf_" +str(date)+".pkl"))
-gfpdf.to_pickle(outfilename +str("gfpdf_" +str(date)+".pkl"))
-gfpdfori.to_pickle(outfilename +str("gfpdfori_" +str(date)+".pkl"))
-gfpsumdf.to_pickle(outfilename +str("gfpsumdf_" +str(date)+".pkl"))
-gfpsumdfori.to_pickle(outfilename +str("gfpsumdfori_" +str(date)+".pkl"))
-gfpGMmaxdf.to_pickle(outfilename +str("gfpGMmaxdf_" +str(date)+".pkl"))
-gfpGMmaxdfori.to_pickle(outfilename +str("gfpGMmaxdfori_" +str(date)+".pkl"))
-proteinareadf.to_pickle(outfilename +str("proteinareadf_" +str(date)+".pkl"))
-areamaskdf.to_pickle(outfilename +str("areamaskdf_" +str(date)+".pkl"))
-radiusdf.to_pickle(outfilename +str("radiusdf_" +str(date)+".pkl"))
-volumedf.to_pickle(outfilename +str("volumedf_" +str(date)+".pkl"))
-gfpmaxnorm.to_pickle(outfilename +str("gfpmaxnorm_" +str(date)+".pkl"))
-gfpsumnorm.to_pickle(outfilename +str("gfpsumnorm_" +str(date)+".pkl"))
-gfpmaxnormori.to_pickle(outfilename +str("gfpmaxnormori_" +str(date)+".pkl"))
 
-gfpsumnormori.to_pickle(outfilename +str("gfpsumnormori_" +str(date)+".pkl"))
 rfpmaxnorm.to_pickle(outfilename +str("rfpmaxnorm_" +str(date)+".pkl"))
 rfpsumnorm.to_pickle(outfilename +str("rfpsumnorm_" +str(date)+".pkl"))
 gfpmaxvoln.to_pickle(outfilename +str("gfpmaxvoln_" +str(date)+".pkl"))  
@@ -69,3 +61,8 @@ gfpsumMedGMMAXback.to_pickle(outfilename +str("gfpsumMedGMMAXback_" +str(date)+"
 
 backmeandf.to_pickle(outfilename +str("backmeandf_" +str(date)+".pkl")) 
 backmediandf.to_pickle(outfilename +str("backmediandf_" +str(date)+".pkl")) 
+
+backmeandfgfp_*  - mean background of the green channel, background is calculated after taking the sum of all zstacks 
+backmediandfgfp_*  - median background of the gfp channel , background is calculated after taking the sum of all zstacks 
+backmeandfrfp_*  - median background of the rfp channel , background is calculated after taking the sum of all zstacks 
+backmediandfrfp_*  - median background of the rfp channel , background is calculated after taking the sum of all zstacks
