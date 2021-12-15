@@ -1,5 +1,5 @@
 # Unet_Pipeline_image_analysis
-uses python and pytorch
+Languages used: Python and Pytorch
 
 To track an individual budding yeast cell overtime
 
