@@ -153,3 +153,30 @@ rfpvolumezstack_*- calculate protein occupancy per zstack of an individual cell 
 
 rfpsum5zstackorinorm_*- samething as rfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
+bfGMmaxzstackori_*-  getting the max mean gaussian mixture model for every zstack from the original brightfield channel 
+
+bfGMminzstackori_*-  getting the min mean gaussian mixture model for every zstack from the original brightfield channel 
+
+proteinareazstackoribf_*- getting the protein area of occupancy from the brightfield channel  channel 
+
+backmedianlszstackbf_*-getting the median background RFP for every zstack per single cell from the original brightfield channel 
+ 
+backmeanlszstackbf_*-getting the mean background brightfield for every zstack per single cell from the original brightfield channel
+
+nzstackbfGMax_*- getting the SUM per zstack of the Max mean gaussian mixture model after subtracting the mean background per zstack. for brightfield channel
+
+nmedzstackbfGMax_*-getting the SUM per zstack of the Max mean gaussian mixture model after subtracting the median background per zstack. for brightfield channel
+
+nzmaxstackbfGMax_*-getting the SUM for the TOP 5 zstacks (based on abovemean) of the Max mean gaussian mixture model after subtracting the median background per zstack. BF
+
+abovemeanbf_*-calculated mean pixels of a single cell greater than a particular threshold per zstack for the brightfield channel
+
+above5meanbf_*-calculated mean pixels of a single cell greater than a particular threshold for the top 5 zstacks for the brightfield channel
+
+volume5bf_*-calculate protein occupancy for the top 5 zstack (based on abovemean) of an individual cell for the brightfield channel
+
+bfsumzstackorinorm_*-the sum BF pixels per zstack subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
+
+bfvolumezstack_*- calculate protein occupancy for the top 5 zstack (based on abovemean) of an individual cell for Brightfield channel 
+
+bfsum5zstackorinorm_*- samething as bfsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
