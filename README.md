@@ -10,7 +10,7 @@ The code has been tailored to use UNET and machinelearning approaches.
 Calculations peformed are used to determine flourescent or brightfield intensity on either all the merged zstacks or on individual zstacks. 
 
 
-#File Outputs:
+# File output Based on Summing the Z Stacks and then performing quantifications
 'Files are outputed for the sum of all zstakcs and for individual zstacks. They are outputted as pickle file'
 
 infodf_* - info file with the cell name, position, time, cell boundary, eccentricity, translation shift, and area
