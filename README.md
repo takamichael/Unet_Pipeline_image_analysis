@@ -3,7 +3,7 @@ Languages used: Python and Pytorch
 
 To track an individual budding yeast cell overtime
 
-This code is specifically made for my dataset which are 512x512 images collected at 63X. Three channels are taken into consideration: Brightfield, green, and red channel. 
+This code is specifically made for my time series dataset which are 512x512 images collected at 63X. Three channels are taken into consideration: Brightfield, green, and red channel. 
 Based on the first time, the pipeline will identify individual mothercells and track the single cell overtime. The code will NOT monitor any daughter cells.
 The code has been tailored to use UNET and machine learning approaches, which take cell size, eccentricity, and area into consideration. 
 
