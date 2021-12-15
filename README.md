@@ -91,7 +91,7 @@ gfpsumMeanGMMAXback_* - gfpGMmaxdf-backmeandf subtracting backmean from mean max
 
 gfpsumMedGMMAXback_* - gfpGMmaxdf-backmediandf subtracting backmedian from mean max pixel after Gaus mixture model for the GFP channel when using a gaussian blur 
 
-# File output for individual Zstack calculations before summing them together
+# File output Based on Individual Zstacks 
 
 gfpsumzstackori_* - getting the sum of the pixels for every zstack from the original GFP channel every zstack pixel sum is taken per single cell
 
@@ -125,33 +125,31 @@ volumezstack_* - calculate protein occupancy per zstack of an individual cell
 
 gfpsum5zstackorinorm_* - samething as gfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
-rfpGMmaxzstackori_*- 
+rfpGMmaxzstackori_*-  getting the max mean gaussian mixture model for every zstack from the original RFP channel 
 
-rfpGMminzstackori_*-
+rfpGMminzstackori_*- getting the min mean gaussian mixture model for every zstack from the original RFP channel 
 
-proteinareazstackorirfp_* - 
+proteinareazstackorirfp_* -  getting the protein area of occupancy from the rfp channel 
 
-backmedianlszstackrfp_*-
+backmedianlszstackrfp_*- getting the median background RFP for every zstack per single cell from the original RFP channel 
 
-backmeanlszstackrfp_*-
+backmeanlszstackrfp_*-getting the mean background RFP for every zstack per single cell from the original RFP channel
 
-nzstackrfpGMax_*-
+nzstackrfpGMax_*-getting the SUM per zstack of the Max mean gaussian mixture model after subtracting the mean background per zstack. for RFP channel
 
-nmedzstackrfpGMax_*-
+nmedzstackrfpGMax_*-getting the SUM per zstack of the Max mean gaussian mixture model after subtracting the median background per zstack. for RFP channel
 
-nzmaxstackrfpGMax_*- 
+nzmaxstackrfpGMax_*- RFP getting the SUM for the TOP 5 zstacks (based on abovemean) of the Max mean gaussian mixture model after subtracting the median background per zstack. 
 
-bay5zstack_*- 
+abovemeanrfp_*- calculated mean pixels of a single cell greater than a particular threshold per zstack for the RFP channel
+
+above5meanrfp_*- calculated mean pixels of a single cell greater than a particular threshold for the top 5 zstacks for the RFP Channel
+
+volume5rfp_*- calculate protein occupancy for the top 5 zstack (based on abovemean) of an individual cell for RFP channel 
  
-abovemeanrfp_*- 
+rfpsumzstackorinorm_*-  the sum RFP pixels per zstack subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
 
-above5meanrfp_*- 
+rfpvolumezstack_*- calculate protein occupancy per zstack of an individual cell for RFP channel 
 
-volume5rfp_*- 
- 
-rfpsumzstackorinorm_*-  
-
-rfpvolumezstack_*- 
-
-rfpsum5zstackorinorm_*- 
+rfpsum5zstackorinorm_*- samething as rfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
