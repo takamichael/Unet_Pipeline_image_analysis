@@ -123,6 +123,8 @@ gfpsumzstackorinorm_*- the sum GFP pixels per zstack subtracted from the median 
 
 gfpvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell 
 
+gfpsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
+
 volumezstack_* - calculate protein occupancy per zstack of an individual cell
 
 gfpsum5zstackorinorm_* - samething as gfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
@@ -152,7 +154,10 @@ volume5rfp_*- calculate protein occupancy for the top 5 zstack (based on aboveme
 rfpsumzstackorinorm_*-  the sum RFP pixels per zstack subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
 
 rfpvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell 
+
 rfpvolumezstack_*- calculate protein occupancy per zstack of an individual cell for RFP channel 
+
+rfpsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
 
 rfpsum5zstackorinorm_*- samething as rfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
@@ -181,6 +186,8 @@ volume5bf_*-calculate protein occupancy for the top 5 zstack (based on abovemean
 bfsumzstackorinorm_*-the sum BF pixels per zstack subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
 
 bfvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
+
+bfsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
 
 bfvolumezstack_*- calculate protein occupancy for the top 5 zstack (based on abovemean) of an individual cell for Brightfield channel 
 
