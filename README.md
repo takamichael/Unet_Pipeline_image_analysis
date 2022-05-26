@@ -125,6 +125,8 @@ gfpvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracte
 
 gfpsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
 
+gfpmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values 
+
 volumezstack_* - calculate protein occupancy per zstack of an individual cell
 
 gfpsum5zstackorinorm_* - samething as gfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
@@ -159,6 +161,8 @@ rfpvolumezstack_*- calculate protein occupancy per zstack of an individual cell 
 
 rfpsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
 
+rfpmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values 
+
 rfpsum5zstackorinorm_*- samething as rfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
 bfGMmaxzstackori_*-  getting the max mean gaussian mixture model for every zstack from the original brightfield channel 
@@ -188,6 +192,8 @@ bfsumzstackorinorm_*-the sum BF pixels per zstack subtracted from the median bac
 bfvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
 
 bfsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
+
+bfmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values
 
 bfvolumezstack_*- calculate protein occupancy for the top 5 zstack (based on abovemean) of an individual cell for Brightfield channel 
 
