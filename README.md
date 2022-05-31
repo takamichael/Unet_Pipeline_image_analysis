@@ -125,6 +125,10 @@ gfpvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracte
 
 gfpsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
 
+gfpGMmaxzstacktop4_* - Per zstack peform gaussian filter of 8 next. From the original mothercell determine the mean pixels >= the gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
+
+gfpGMminzstacktop4_*- Per zstack peform gaussian filter of 8 next. From the original mothercell determine the mean pixels <= the gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
+
 gfpmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values 
 
 volumezstack_* - calculate protein occupancy per zstack of an individual cell
@@ -163,6 +167,11 @@ rfpsumzstackmedarea_*- sum of all the protein in every zstack - the median backg
 
 rfpmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values 
 
+rfpGMmaxzstacktop4_* - Per zstack peform gaussian filter of 8 next. From the original mothercell determine the mean pixels >= the 
+gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
+
+rfpGMminzstacktop4_*- Per zstack peform gaussian filter of 8 next. From the original mothercell determine the mean pixels <= the gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
+
 rfpsum5zstackorinorm_*- samething as rfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
 bfGMmaxzstackori_*-  getting the max mean gaussian mixture model for every zstack from the original brightfield channel 
@@ -192,6 +201,12 @@ bfsumzstackorinorm_*-the sum BF pixels per zstack subtracted from the median bac
 bfvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell
 
 bfsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
+
+
+bfGMmaxzstacktop4_* - Per zstack  peform gaussian filter of 8 next. From the original mothercell determine the mean pixels >= the 
+gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
+
+bfGMminzstacktop4_*- Per zstack peform gaussian filter of 8 next. From the original mothercell determine the mean pixels <= the gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
 
 bfmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values
 
