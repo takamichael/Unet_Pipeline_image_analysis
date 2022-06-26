@@ -1,4 +1,4 @@
-# Unet_Pipeline_image_analysis
+# UNET_lapvar_Pipeline_Image_analysis  
 Languages used: Python and Pytorch
 
 To track an individual budding yeast cell overtime
@@ -9,6 +9,7 @@ The code has been tailored to use UNET and machine learning approaches, which ta
 
 Calculations peformed are used to determine flourescent or brightfield intensity on either all the merged zstacks or on individual zstacks. 
 
+Unet_Pipeline_image_analysis.ipynb - is the old UNET pipeline and depended on a UNET that tracked just the mothercell 
 
 # File output Based on Summing the Z Stacks and then performing quantifications
 'Files are outputed for the sum of all zstakcs and for individual zstacks. They are outputted as pickle file'
