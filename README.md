@@ -20,6 +20,8 @@ Unet_Pipeline_image_analysis.ipynb - is the old UNET pipeline and depended on a 
 
 UNET_Mothercell_notebookGitHubV.ipynb - Notebook used to trian the UNET model to detect ONLY the single mother cells. This UNET model was used with the Unet_Pipeline_image_analysis.ipynb notebook
 
+requirements_Unet_lapvar_pipeline_6_10_2022.txt - is the requirment textfile which responds to the packages used for the UNET_lapvar_Pipeline_Image_analysis.ipynb
+
 
 # File output Based on Summing the Z Stacks and then performing quantifications
 'Files are outputed for the sum of all zstakcs and for individual zstacks. They are outputted as pickle file'
