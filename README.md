@@ -9,7 +9,14 @@ The code has been tailored to use UNET and machine learning approaches, which ta
 
 Calculations peformed are used to determine flourescent or brightfield intensity on either all the merged zstacks or on individual zstacks. 
 
+NoteBooks:
+
 Unet_Pipeline_image_analysis.ipynb - is the old UNET pipeline and depended on a UNET that tracked just the mothercell 
+
+UNET_Allcell_notebook.ipynb - Notebook used to train the UNET Model to detect all the cells in a 512x 512 image
+
+
+
 
 # File output Based on Summing the Z Stacks and then performing quantifications
 'Files are outputed for the sum of all zstakcs and for individual zstacks. They are outputted as pickle file'
