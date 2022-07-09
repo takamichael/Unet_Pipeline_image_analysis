@@ -14,11 +14,11 @@ NoteBooks:
 
 UNET_lapvar_Pipeline_Image_analysis.ipynb- Current pipeline used. Depends on two UNET models with Watersheding and Machine learning approaches to track a single cell
 
-Unet_Pipeline_image_analysis.ipynb - is the old UNET pipeline and depended on a UNET that tracked just the mothercell 
-
 UNET_Allcell_notebook.ipynb - Notebook used to train the UNET Model to detect all the cells in a 512x 512 image
 
+Unet_Pipeline_image_analysis.ipynb - is the old UNET pipeline and depended on a UNET that tracked just the mothercell 
 
+UNET_Mothercell_notebookGitHubV.ipynb - Notebook used to trian the UNET model to detect ONLY the single mother cells. This UNET model was used with the Unet_Pipeline_image_analysis.ipynb notebook
 
 
 # File output Based on Summing the Z Stacks and then performing quantifications
@@ -134,7 +134,7 @@ gfpsumzstackorinorm_*- the sum GFP pixels per zstack subtracted from the median 
 
 gfpvolzstacknorm_* - Sum of protein occupancy per zstack for each cell subtracted from the median background per zstack and divided by the volume of protein occupancy per zstack for each cell 
 
-gfpsumzstackmedarea_*- sum of all the protein in every zstack - the median background divided by the cell area
+gfpsumzstackmedarea_*- sum of all the protein in every zstack with the median background divided by the cell area
 
 gfpGMmaxzstacktop4_* - Per zstack peform gaussian filter of 8 next. From the original mothercell determine the mean pixels >= the gausssian mixture model from the blured image. Note the Median background is NOT subracted from this value 
 
