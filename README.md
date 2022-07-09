@@ -10,6 +10,7 @@ The code has been tailored to use UNET and machine learning approaches, which ta
 Calculations peformed are used to determine flourescent or brightfield intensity on either all the merged zstacks or on individual zstacks. 
 
 NoteBooks:
+UNET_lapvar_Pipeline_Image_analysis.ipynb- Current pipeline used. Depends on two UNET models with Watersheding and Machine learning approaches to track a single cell
 
 Unet_Pipeline_image_analysis.ipynb - is the old UNET pipeline and depended on a UNET that tracked just the mothercell 
 
