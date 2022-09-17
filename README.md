@@ -226,3 +226,17 @@ bfmeanzstack_*- Mean of all the protein of an individual mother cell in every zs
 bfvolumezstack_*- calculate protein occupancy for the top 5 zstack (based on abovemean) of an individual cell for Brightfield channel 
 
 bfsum5zstackorinorm_*- samething as bfsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
+
+#Files based on individual zstacks calculated using the Gaussian Mixture model for another channel The file should appear as the first * flourescent marker that is being quantified and the second * which is used to make the mask 
+
+*hyb*Gmaxsumnorm_*- Used the GMM max of another channel, like RFP, to get the coordinates of GMM and then get the pixel sum of another channel like GFP, which is then normalized to the backgroundzstackmedian.  
+
+*hyb*Gminsumnorm_*- Used the GMM min of another channel, like RFP, to get the coordinates of GMM and then get the pixel sum of another channel like GFP, which is then normalized to the backgroundzstackmedian 
+
+*hyb*Gmaxnorm_*- 
+*hyb*Gminnorm_*
+*hyb*intensity_*
+*hyb*Gmaxsum_*
+*hyb*Gminsum_*
+*hyb*Gmaxmean_*
+*hyb*Gminmean_*
