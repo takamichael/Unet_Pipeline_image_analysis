@@ -144,7 +144,7 @@ gfpGMminzstacktop4_*- Per zstack peform gaussian filter of 8 next. From the orig
 
 gfpmeanzstack_*- Mean of all the protein of an individual mother cell in every zstack subtracting the median background and then summing the values 
 
-volumezstack_* - calculate protein occupancy per zstack of an individual cell
+volumezstack_* - calculate protein occupancy per zstack of an individual cell. Threshold made by subtracting the median background per zstack then turning all negatives into 0. Next a gaussian blur with a sigma of 1 is done on the whole image. The threshold is then calculated by getting the mean of the blurred background subracted image. Sum of the boolan pixels greater than the mean is the protein occupancy.  
 
 gfpsum5zstackorinorm_* - samething as gfpsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
