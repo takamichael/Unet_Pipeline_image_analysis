@@ -231,15 +231,15 @@ bfvolumezstack_*- calculate protein occupancy for the top 5 zstack (based on abo
 
 bfsum5zstackorinorm_*- samething as bfsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
-# Files based on individual zstacks calculated using the Gaussian Mixture model coordinates from another channel The file should appear as the first * flourescent marker that is being quantified and the second * which is used to make the mask. Example: the mask is made using the 'rfpGMmaxcoor' and then getting the protein sum or mean of another channel like in the GFP or BF thus file would be 'gfphybrfpGmaxsumnorm_*'
+# Files based on aggregating zstacks calculated using the Gaussian Mixture model coordinates from another channel The file should appear as the first * flourescent marker that is being quantified and the second * which is used to make the mask. Example: the mask is made using the 'rfpGMmaxcoor' and then getting the protein sum or mean of another channel like in the GFP or BF thus file would be 'gfphybrfpGmaxsumnorm_*. the values come from aggregating the images together'
 
-*hyb*Gmaxsumnorm_*- GMM max of reference channel for the pixel sum of another channel, which is then subtracted from backmedianlszstack per Zstack then summed.  
+*hyb*Gmaxsumnorm_*- GMM max of reference channel for the pixel sum of another channel, which is then subtracted from the sum zstack backmedianlszstack 
 
-*hyb*Gminsumnorm_*- GMM min of reference channel for the pixel sum of another channel, which is then subtracted from backmedianlszstack per Zstack then summed.  
+*hyb*Gminsumnorm_*- GMM min of reference channel for the pixel sum of another channel, which is then subtracted from the sum zstack backmedianlszstack 
 
-*hyb*Gmaxnorm_*-  GMM max of  reference channel used for the pixel Mean of another channel, which is then subtracted from backmedianlszstack per Zstack then summed.  
+*hyb*Gmaxnorm_*-  GMM max of  reference channel used for the pixel Mean of another channel, which is then subtracted from the sum zstack backmedianlszstack 
 
-*hyb*Gminnorm_* - GMM min of  reference channel used for the pixel Mean of another channel, which is then subtracted from backmedianlszstack per Zstack then summed
+*hyb*Gminnorm_* - GMM min of  reference channel used for the pixel Mean of another channel, which is then subtracted from the sum zstack backmedianlszstack  
 
 *hyb*intensity_* - *hyb*Gminnorm_* and *hyb*Gmaxnorm_* summed which then gives you the intensity as marker is normalized for area of pixels and background 
 
