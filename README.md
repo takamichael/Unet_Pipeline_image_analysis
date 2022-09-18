@@ -231,6 +231,83 @@ bfvolumezstack_*- calculate protein occupancy for the top 5 zstack (based on abo
 
 bfsum5zstackorinorm_*- samething as bfsumzstackorinorm except that intead of using all the zstacks the top 5 zstacks are being used
 
+## Files made by Aggregating zstacks together and peforming a Gaussian Mixture Model. To obtain proper demixing, a gausian filter of 3.5 is applied to the original image. Afterwhich, both the gaussian blurred image and mask of an individual mother is fed to the model. Two thresholds are calculated, the Gaussian mixture Model Max threshold is kept. The GMM area, mean, and sum  is calculated by using the ORIGINAL image and collecting pixels greater or less than the GMM max Threshold. I then turned everything outside of the mother cell into 0 before collecting the coordinates, area, and values. Any file with *norm indicates that they were normalized by subtracting the median background, this is calculated by obtaining the background of individual zstacks and summing it together per cell per individual time, 
+
+gfpGMmaxareadf_* - counting the sum of boolan values greater than or equal to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For GFP channel
+
+gfpGMminareadf_* - counting the sum of boolan values less than the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For GFP channel
+
+gfpGMmaxsumdfori_* -  Sum of pixels, per mother cell,greater than or equal to the GMM Threshold . Keep in mind values are from AGGREGATED zstacks.  For GFP channel
+
+gfpGMminsumdfori_* - Sum of pixels, per mother cell,less than the GMM Threshold. Keep in mind values are from AGGREGATED zstacks. For GFP channel
+
+gfpGMmaxdfori_* - The mean of the pixels, per mother cell, greater than or equal to the GMM Threshold. The intensity of the flourescent of the region. For GFP channel
+
+gfpGMmindfori_* - getting the mean of the pixels, per mother cell, less than to the GMM Threshold. Gives intensity of the flourescent of the region. For GFP channel
+
+gfpGMmaxcoor_* - the coordinates of the region that was greater than or equal to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For GFP channel
+
+gfpGMmincoor_* - the coordinates of the region that was less than to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For GFP channel
+
+gfpGMmaxsumdforinorm_* - gfpGMmaxsumdfori_* values are subtracted from the median background calculated per zstack. For GFP channel 
+
+gfpGMminsumdforinorm_* - gfpGMminsumdfori_* values are subtracted from the median background calculated per zstack. For GFP channel 
+
+gfpGMmaxdforinorm_* - gfpGMmaxdfori_* values are subtracted from the median background calculated per zstack. For GFP channel 
+
+gfpGMmindforinorm_* - gfpGMmindfori_* values are subtracted from the median background calculated per zstack. For GFP channel 
+
+
+rfpGMmaxareadf_* - counting the sum of boolan values greater than or equal to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For RFP channel
+
+rfpGMminareadf_* - counting the sum of boolan values less than the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For RFP channel
+
+rfpGMmaxsumdfori_* -  Sum of pixels, per mother cell,greater than or equal to the GMM Threshold . Keep in mind values are from AGGREGATED zstacks.  For RFP channel
+
+rfpGMminsumdfori_* - Sum of pixels, per mother cell,less than the GMM Threshold. Keep in mind values are from AGGREGATED zstacks. For RFP channel
+
+rfpGMmaxdfori_* - The mean of the pixels, per mother cell, greater than or equal to the GMM Threshold. The intensity of the flourescent of the region. For RFP channel
+
+rfpGMmindfori_* - getting the mean of the pixels, per mother cell, less than to the GMM Threshold. Gives intensity of the flourescent of the region. For RFP channel
+
+rfpGMmaxcoor_* - the coordinates of the region that was greater than or equal to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For RFP channel
+
+rfpGMmincoor_* - the coordinates of the region that was less than to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For RFP channel
+
+rfpGMmaxsumdforinorm_* - rfpGMmaxsumdfori_* values are subtracted from the median background calculated per zstack. For RFP channel 
+
+rfpGMminsumdforinorm_* - rfpGMminsumdfori_* values are subtracted from the median background calculated per zstack. For RFP channel 
+
+rfpGMmaxdforinorm_* - rfpGMmaxdfori_* values are subtracted from the median background calculated per zstack. For RFP channel 
+
+rfpGMmindforinorm_* - rfpGMmindfori_* values are subtracted from the median background calculated per zstack. For RFP channel 
+
+
+
+bfGMmaxareadf_* - counting the sum of boolan values greater than or equal to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For BF channel
+
+bfGMminareadf_* - counting the sum of boolan values less than the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For BF channel
+
+bfGMmaxsumdfori_* -  Sum of pixels, per mother cell,greater than or equal to the GMM Threshold . Keep in mind values are from AGGREGATED zstacks.  For BF channel
+
+bfGMminsumdfori_* - Sum of pixels, per mother cell,less than the GMM Threshold. Keep in mind values are from AGGREGATED zstacks. For BF channel
+
+bfGMmaxdfori_* - The mean of the pixels, per mother cell, greater than or equal to the GMM Threshold. The intensity of the flourescent of the region. For BF channel
+
+bfGMmindfori_* - getting the mean of the pixels, per mother cell, less than to the GMM Threshold. Gives intensity of the flourescent of the region. For BF channel
+
+bfGMmaxcoor_* - the coordinates of the region that was greater than or equal to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For BF channel
+
+bfGMmincoor_* - the coordinates of the region that was less than to the GMM threshold. Keep in mind values are from AGGREGATED zstacks. For BF channel
+
+bfGMmaxsumdforinorm_* - bfGMmaxsumdfori_* values are subtracted from the median background calculated per zstack. For BF channel 
+
+bfGMminsumdforinorm_* - bfGMminsumdfori_* values are subtracted from the median background calculated per zstack. For BF channel 
+
+bfGMmaxdforinorm_* - bfGMmaxdfori_* values are subtracted from the median background calculated per zstack. For BF channel 
+
+bfGMmindforinorm_* - bfGMmindfori_* values are subtracted from the median background calculated per zstack. For BF channel 
+
 # Files based on aggregating zstacks calculated using the Gaussian Mixture model coordinates from another channel The file should appear as the first * flourescent marker that is being quantified and the second * which is used to make the mask. Example: the mask is made using the 'rfpGMmaxcoor' and then getting the protein sum or mean of another channel like in the GFP or BF thus file would be 'gfphybrfpGmaxsumnorm_*. the values come from aggregating the images together'
 
 *hyb*Gmaxsumnorm_*- GMM max of reference channel for the pixel sum of another channel, which is then subtracted from the sum zstack backmedianlszstack 
